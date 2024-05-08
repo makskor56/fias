@@ -10,12 +10,10 @@ import ru.orenfoms.fias.entitys.Person;
 import ru.orenfoms.fias.repositories.PersonRepository;
 
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.*;
+
 
 @Controller
 public class HomeController {
@@ -35,6 +33,7 @@ public class HomeController {
     @ResponseBody
     public Iterable<Integer> test() {
         List<Integer> list = Stream.iterate(0, x -> x + 1).limit(100L).toList();
+        System.out.println("test");
         return list;
     }
 
