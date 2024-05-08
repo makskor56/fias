@@ -33,7 +33,7 @@ public class HomeController {
     @ResponseBody
     public Iterable<Integer> test() {
         List<Integer> list = Stream.iterate(0, x -> x + 1).limit(100L).toList();
-        System.out.println("test1");
+        System.out.println("test2");
         return list;
     }
 
